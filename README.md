@@ -1,1 +1,5 @@
-# IT2234-Web-services-and-server-technologies
+# IT2234-Web-services-and-server-technologies![practice 01-05](https://github.com/user-attachments/assets/644042a4-3724-4934-8783-badc5857dafb)
+![practice 06-08](https://github.com/user-attachments/assets/93a2c76d-af0d-4440-aa57-d93e36da5350)
+![practice 09 -1![practice 11-i](https://github.com/user-attachments/assets/42f61f1d-fbf2-4d31-a0c7-1330334475f8)
+0](https://github.com/user-attachments/assets/619fe259-148e-465c-bc1d-e0b5146308b1)
+![practice 11-ii](https://github.com/user-attachments/assets/a16c71d5-1d1a-4f4b-ab95-5e7537a28741)
