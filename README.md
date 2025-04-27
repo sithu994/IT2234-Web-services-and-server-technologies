@@ -1,0 +1,7 @@
+![age_Greater23](https://github.com/user-attachments/assets/0cec2538-1d26-464f-8277-ce3265e85215)
+![age_less23](https://github.com/user-attachments/assets/835cf74a-1355-4be7-b6df-c2cd2e5d6e48)
+![All_insertdata](https://github.com/user-attachments/assets/247432b8-898f-48c9-83ef-298bd86ed175)
+![skill-mongodb](https://github.com/user-attachments/assets/b7848416-cd42-47e9-8efd-e42c4ae0dcb0)
+![CS_male_](https://github.com/user-attachments/assets/fd49ff3f-7137-4d8b-83d4-ece1b284a03a)
+![Gender_Female](https://github.com/user-attachments/assets/8cdd8b84-a533-4f38-ab05-b3d24a36a8ba)
+![Gender_Female_ii](https://github.com/user-attachments/assets/ccf5e246-5799-4e59-a93d-9aea15ca6b0e)
