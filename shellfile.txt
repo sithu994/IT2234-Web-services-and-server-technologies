@@ -1,0 +1,375 @@
+use unidb
+switched to db unidb
+db.students.insertOne(
+{
+"regno": "2021IT02",
+  "name": "Kavin",
+  "age": 25,
+  "degree": "IT",
+  "gpa": 3.2,
+  "gender": "Female",
+  "skill": [
+    "JS",
+    "MongoDb",
+    "Node"
+  ]
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('680de03c3de62e09a376682b')
+}
+db.students.insertMany(
+[
+{
+"regno": "2021IT02",
+  "name": "Kavin",
+  "age": 25,
+  "degree": "IT",
+  "gpa": 3.2,
+  "gender": "Female",
+  "skill": [
+    "JS",
+    "MongoDb",
+    "Node"
+  ]
+},
+{
+ "regno": "2021IT01",
+  "name": "Kolins",
+  "age": 25,
+  "degree": "IT",
+  "gpa": 3.2,
+  "skill": [
+    "JS",
+    "MongoDb",
+    "Node"
+  ],
+  "gender": "Male"
+},
+{
+  "regno": "2021IT03",
+  "name": "Sansala",
+  "age": 23,
+  "degree": "IT",
+  "gpa": 3.2,
+  "skill": [
+    "Java",
+    "MongoDb",
+    "MYSQL"
+  ],
+  "gender": "Female"
+},
+{
+  "regno": "2021IT04",
+  "name": "Nethmini",
+  "age": 24,
+  "degree": "IT",
+  "gpa": 3.5,
+  "skill": [
+    "Java",
+    "MongoDb",
+    "Node"
+  ],
+  "gender": "Female"
+},
+{
+"regno": "2021IT05",
+  "name": "Tharindu",
+  "age": 22,
+  "degree": "IT",
+  "gpa": 3.1,
+  "skill": [
+    "Java",
+    "MongoDb",
+    "Node"
+  ],
+  "gender": "Male"
+}]
+)
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680de0583de62e09a376682c'),
+    '1': ObjectId('680de0583de62e09a376682d'),
+    '2': ObjectId('680de0583de62e09a376682e'),
+    '3': ObjectId('680de0583de62e09a376682f'),
+    '4': ObjectId('680de0583de62e09a3766830')
+  }
+}
+
+3.db.students.find({'degree':'IT','gender':'Female'}).sort({'gpa':1})
+
+{
+  _id: ObjectId('680ddcf236d4a62b7d5e2dfe'),
+  regno: '2021IT02',
+  name: 'savin',
+  age: 22,
+  degree: 'CS',
+  gpa: 2.2,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'Xampp',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd4636d4a62b7d5e2e00'),
+  regno: '2021IT04',
+  name: 'Anju',
+  age: 24,
+  degree: 'IT',
+  gpa: 2.7,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Html'
+  ]
+}
+04.
+
+db.students.find({"age":{$lt:24}})
+
+{
+  _id: ObjectId('680ddcf236d4a62b7d5e2dfe'),
+  regno: '2021IT02',
+  name: 'savin',
+  age: 22,
+  degree: 'CS',
+  gpa: 2.2,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'Xampp',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd8536d4a62b7d5e2e01'),
+  regno: '2021IT05',
+  name: 'Gaguli',
+  age: 23,
+  degree: 'CS',
+  gpa: 2.9,
+  gender: 'Female',
+  skill: [
+    'CSS',
+    'MongoDb',
+    'Html'
+  ]
+}
+
+04.
+db.students.find({ "skill": { $in: ["MongoDb"] } })
+
+{
+  _id: ObjectId('680dda1036d4a62b7d5e2dfd'),
+  regno: '2021IT01',
+  name: 'Kavin',
+  age: 25,
+  degree: 'IT',
+  gpa: 3.2,
+  gender: 'Female',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd4636d4a62b7d5e2e00'),
+  regno: '2021IT04',
+  name: 'Anju',
+  age: 24,
+  degree: 'IT',
+  gpa: 2.7,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Html'
+  ]
+}
+{
+  _id: ObjectId('680ddd8536d4a62b7d5e2e01'),
+  regno: '2021IT05',
+  name: 'Gaguli',
+  age: 23,
+  degree: 'CS',
+  gpa: 2.9,
+  gender: 'Female',
+  skill: [
+    'CSS',
+    'MongoDb',
+    'Html'
+  ]
+}
+05.
+db.students.find({"skill":{$in:["Mongodb","Java"]}})
+
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
+
+06.
+db.students.find().sort({'gpa':1})
+
+{
+  _id: ObjectId('680ddcf236d4a62b7d5e2dfe'),
+  regno: '2021IT02',
+  name: 'savin',
+  age: 22,
+  degree: 'CS',
+  gpa: 2.2,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'Xampp',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd4636d4a62b7d5e2e00'),
+  regno: '2021IT04',
+  name: 'Anju',
+  age: 24,
+  degree: 'IT',
+  gpa: 2.7,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Html'
+  ]
+}
+{
+  _id: ObjectId('680ddd8536d4a62b7d5e2e01'),
+  regno: '2021IT05',
+  name: 'Gaguli',
+  age: 23,
+  degree: 'CS',
+  gpa: 2.9,
+  gender: 'Female',
+  skill: [
+    'CSS',
+    'MongoDb',
+    'Html'
+  ]
+}
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680dda1036d4a62b7d5e2dfd'),
+  regno: '2021IT01',
+  name: 'Kavin',
+  age: 25,
+  degree: 'IT',
+  gpa: 3.2,
+  gender: 'Female',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Node'
+  ]
+}
+
+06.
+db.students.find({'degree':'IT','gender':'Male'}).sort({'gpa':1})
+
+{
+  _id: ObjectId('680ddd4636d4a62b7d5e2e00'),
+  regno: '2021IT04',
+  name: 'Anju',
+  age: 24,
+  degree: 'IT',
+  gpa: 2.7,
+  gender: 'Male',
+  skill: [
+    'JS',
+    'MongoDb',
+    'Html'
+  ]
+}
+
+07.db.students.find({'degree':'IT','gender':'Female'}).sort({'gpa':1})
+
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
+{
+  _id: ObjectId('680ddd1936d4a62b7d5e2dff'),
+  regno: '2021IT03',
+  name: 'Sumudu',
+  age: 23,
+  degree: 'IT',
+  gpa: 3.1,
+  gender: 'Female',
+  skill: [
+    'Java',
+    'MongoDb',
+    'Node'
+  ]
+}
