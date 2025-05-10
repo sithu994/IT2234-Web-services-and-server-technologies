@@ -1,0 +1,140 @@
+1. Create a Database Library
+
+use Library
+
+2. Create a collection named books
+
+db.createCollection("books")
+
+3.Insert documents into the 'books' collection
+
+db.books.insertMany([
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year_published": 1813,
+    "genres": ["Fiction", "Romance"],
+    "available": true
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "year_published": 1951,
+    "genres": ["Fiction", "Classic"],
+    "available": true
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year_published": 1937,
+    "genres": ["Fantasy", "Adventure"],
+    "available": true
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "year_published": 1851,
+    "genres": ["Fiction", "Adventure"],
+    "available": true
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "year_published": 1869,
+    "genres": ["Historical Fiction", "Classic"],
+    "available": true
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "year_published": -800,
+    "genres": ["Epic", "Adventure"],
+    "available": true
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "year_published": 1880,
+    "genres": ["Fiction", "Philosophical"],
+    "available": true
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "year_published": 1932,
+    "genres": ["Dystopian", "Science Fiction"],
+    "available": true
+  },
+  {
+    "title": "The Divine Comedy",
+    "author": "Dante Alighieri",
+    "year_published": 1320,
+    "genres": ["Epic", "Poetry"],
+    "available": true
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "year_published": 1866,
+    "genres": ["Fiction", "Philosophical"],
+    "available": true
+  }
+])
+
+4. Find all documents
+
+db.books.find()
+
+5. Find books published after 1950
+
+db.books.find({ year_published: { $gt: 1950 } })
+
+6. Find a book by title
+
+db.books.find({ title: "The Hobbit" })
+
+7. Update the year published for "The Great Gatsby"
+
+db.books.insertOne({
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  year_published: 1925,
+  genres: ["Fiction", "Classic"],
+  available: true
+})
+
+db.books.updateOne(
+  { title: "The Great Gatsby" },
+  { $set: { year_published: 1926 } }
+)
+
+8. Update available status of "Moby-Dick" to false
+
+db.books.updateOne(
+  { title: "Moby-Dick" },
+  { $set: { available: false } }
+)
+
+9. Set a new field checked_out to false for all available books
+
+db.books.updateMany(
+  { available: true },
+  { $set: { checked_out: false } }
+)
+
+10. Set checked_out to true for books in the "Adventure" genre
+
+db.books.updateMany(
+  { genres: "Adventure" },
+  { $set: { checked_out: true } }
+)
+
+11. Delete a book by title
+
+db.books.deleteOne({ title: "The Divine Comedy" })
+
+12. Delete all books published before 1930
+
+db.books.deleteMany({ year_published: { $lt: 1930 } })
+
+
