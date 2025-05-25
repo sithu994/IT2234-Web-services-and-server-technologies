@@ -1,0 +1,5 @@
+![database](https://github.com/user-attachments/assets/daf7a362-e33f-4b29-be1f-451957182b33)
+![mongoose](https://github.com/user-attachments/assets/1fa13d7b-ee37-47e0-b2c6-93244b96e675)
+![course_postman](https://github.com/user-attachments/assets/4b3ab690-7608-4dec-be11-5402e39329e6)
+![degree_postman](https://github.com/user-attachments/assets/5b105965-3696-4180-ab1e-70d116b64926)
+![student-postman](https://github.com/user-attachments/assets/5b1130c2-2cb5-4945-98e2-4eb3fc70e525)
